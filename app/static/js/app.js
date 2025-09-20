@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('loader');
     const top10List = document.getElementById('top-10-list');
 
-    // Function to format large numbers into Trillions, Billions
+    
     const formatMarketCap = (num) => {
         if (num === null) return 'N/A';
         if (num >= 1e12) {
@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch and populate top 10 list on startup
     const loadTopCompanies = async () => {
-        // This is a static list now to avoid hitting the API rate limit on page load.
+        
         const topNasdaqCompanies = [
             "MSFT", "AAPL", "NVDA", "GOOGL", "AMZN", 
             "META", "AVGO", "TSLA", "COST", "ADBE"
         ];
 
-        top10List.innerHTML = ''; // Clear list
+        top10List.innerHTML = ''; 
         topNasdaqCompanies.forEach(ticker => {
             const li = document.createElement('li');
             const strong = document.createElement('strong');

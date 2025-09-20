@@ -37,5 +37,3 @@ def analyze_city(city):
     analysis = gemini_service.analyze_with_gemini(results)
     return jsonify({"analysis": analysis})
 
-# This endpoint is no longer needed as we simplified the sidebar
-# to avoid API call issues on page load.

@@ -7,6 +7,6 @@ spec:
     app: stock-analyzer
   ports:
     - protocol: TCP
-      port: 80       # External port clients will connect to
-      targetPort: 5000 # Internal port of your container
-  type: LoadBalancer # Creates a cloud load balancer to direct traffic to your app
+      port: 80       
+      targetPort: 5000 
+  type: LoadBalancer 
