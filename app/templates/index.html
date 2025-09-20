@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <h1>Local Stock Analyzer</h1>
+            <p>Select a city to analyze top-performing public companies.</p>
+            <div class="button-group">
+                <button id="btn-austin" data-city="austin">Find Good Companies in Austin</button>
+                <button id="btn-dallas" data-city="dallas">Find Good Companies in Dallas</button>
+            </div>
+            <div id="loader" class="loader hidden"></div>
+            <div id="results" class="results-container"></div>
+        </main>
+        <aside class="sidebar">
+            <h2>Top 10 NASDAQ (by Market Cap)</h2>
+            <ul id="top-10-list">
+                </ul>
+        </aside>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

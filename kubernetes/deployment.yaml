@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-analyzer-deployment
+spec:
+  replicas: 2 # Run 2 instances for high availability
+  selector:
+    matchLabels:
+      app: stock-analyzer
+  template:
+    metadata:
+      labels:
+        app: stock-analyzer
+    spec:
+      containers:
+      - name: stock-analyzer-container
+        image: sohelpusgod/stock-analyzer:latest
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - secretRef:
+            name: api-keys-secret
